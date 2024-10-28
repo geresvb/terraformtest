@@ -7,7 +7,7 @@ terraform {
     organization = "German_Terraform"
 
     workspaces {
-      name = "terraformtest"
+      name = "tf-cloud-test"
     }
   }
 
@@ -40,18 +40,18 @@ resource "aws_instance" "tc_instance" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "TC-1"
+    Name = "TC-triggered-instance"
   }
 }
 
-# resource "aws_instance" "tc_instance" {
-#   ami           = "ami-0c7c4e3c6b4941f0f"
-#   instance_type = "t2.micro"
+resource "aws_instance" "tc_instance2" {
+  ami           = "ami-0c7c4e3c6b4941f0f"
+  instance_type = "t2.micro"
 
-#   tags = {
-#     Name = "TC-USER"
-#   }
-# }
+  tags = {
+    Name = "TC-Im-a-user"
+  }
+}
 
 
 #test
