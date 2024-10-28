@@ -7,7 +7,7 @@ terraform {
     organization = "German_Terraform"
 
     workspaces {
-      name = "tf-cloud-test"
+      name = "terraformtest"
     }
   }
 
